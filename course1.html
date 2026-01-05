@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Course 1</title>
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f7fa;
+  margin:0;
+}
+header{
+  background:#111827;
+  color:white;
+  padding:30px;
+}
+.container{
+  max-width:800px;
+  margin:40px auto;
+  background:white;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+input{
+  padding:10px;
+  width:250px;
+}
+button{
+  padding:10px 16px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+button:hover{
+  background:#1e40af;
+}
+#content{
+  display:none;
+  margin-top:30px;
+}
+a{
+  display:block;
+  margin:12px 0;
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Course 1: Introduction</h2>
+  <p>Password-protected materials</p>
+</header>
+
+<div class="container">
+
+  <p>Please enter the course password to access materials:</p>
+
+  <input type="password" id="pw" placeholder="Password">
+  <button onclick="unlock()">Unlock</button>
+
+  <div id="content">
+    <hr>
+    <h3>Lecture Materials</h3>
+    <a id="s1" target="_blank">📄 Lecture Slides</a>
+    <a id="v1" target="_blank">🎥 Lecture Video</a>
+  </div>
+
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("pw").value === "course1pass"){
+    document.getElementById("content").style.display = "block";
+
+    document.getElementById("s1").href =
+      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC94eHg=");
+    document.getElementById("v1").href =
+      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC95eXk=");
+  } else {
+    alert("Incorrect password");
+  }
+}
+</script>
+
+</body>
+</html>
