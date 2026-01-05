@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>دانلود فایل‌های کلاس</title>
+<style>
+body{font-family:tahoma;direction:rtl;margin:40px}
+input,button{padding:8px;font-size:14px}
+#files{display:none;margin-top:20px}
+</style>
+</head>
+
+<body>
+
+<h2>ورود دانشجویان</h2>
+<p>برای مشاهده و دانلود فایل‌ها، رمز را وارد کنید</p>
+
+<input type="password" id="pw" placeholder="رمز ورود">
+<button onclick="unlock()">ورود</button>
+
+<div id="files">
+  <hr>
+  <h3>فایل‌های درس</h3>
+  <ul>
+    <li><a id="f1" target="_blank">📄 اسلاید جلسه ۱</a></li>
+    <li><a id="f2" target="_blank">🎥 ویدیو جلسه ۱</a></li>
+  </ul>
+</div>
+
+<script>
+function unlock(){
+  const p = document.getElementById("pw").value;
+
+  if(p === "bio2025"){
+    document.getElementById("files").style.display = "block";
+
+    document.getElementById("f1").href =
+      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC94eHg=");
+
+    document.getElementById("f2").href =
+      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC95eXk=");
+
+  } else {
+    alert("رمز اشتباه است");
+  }
+}
+</script>
+
+</body>
+</html>
