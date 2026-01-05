@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Course 1</title>
+<title>Course 1 – Introduction</title>
 <style>
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +15,7 @@ header{
   padding:30px;
 }
 .container{
-  max-width:800px;
+  max-width:900px;
   margin:40px auto;
   background:white;
   padding:30px;
@@ -40,12 +40,21 @@ button:hover{
   display:none;
   margin-top:30px;
 }
-a{
-  display:block;
-  margin:12px 0;
+.lecture{
+  border-left:4px solid #2563eb;
+  padding:15px 20px;
+  margin-bottom:20px;
+  background:#f9fafb;
+}
+.lecture h4{
+  margin-top:0;
+}
+.lecture a{
+  display:inline-block;
+  margin-right:20px;
   color:#2563eb;
-  text-decoration:none;
   font-weight:bold;
+  text-decoration:none;
 }
 </style>
 </head>
@@ -54,21 +63,36 @@ a{
 
 <header>
   <h2>Course 1: Introduction</h2>
-  <p>Password-protected materials</p>
+  <p>Lecture slides and recorded videos</p>
 </header>
 
 <div class="container">
 
-  <p>Please enter the course password to access materials:</p>
+  <p>Please enter the course password:</p>
 
   <input type="password" id="pw" placeholder="Password">
   <button onclick="unlock()">Unlock</button>
 
   <div id="content">
-    <hr>
-    <h3>Lecture Materials</h3>
-    <a id="s1" target="_blank">📄 Lecture Slides</a>
-    <a id="v1" target="_blank">🎥 Lecture Video</a>
+
+    <div class="lecture">
+      <h4>Lecture 1 – Overview</h4>
+      <a id="l1s" target="_blank">📄 Slides</a>
+      <a id="l1v" target="_blank">🎥 Video</a>
+    </div>
+
+    <div class="lecture">
+      <h4>Lecture 2 – Core Concepts</h4>
+      <a id="l2s" target="_blank">📄 Slides</a>
+      <a id="l2v" target="_blank">🎥 Video</a>
+    </div>
+
+    <div class="lecture">
+      <h4>Lecture 3 – Applications</h4>
+      <a id="l3s" target="_blank">📄 Slides</a>
+      <a id="l3v" target="_blank">🎥 Video</a>
+    </div>
+
   </div>
 
 </div>
@@ -78,10 +102,18 @@ function unlock(){
   if(document.getElementById("pw").value === "course1pass"){
     document.getElementById("content").style.display = "block";
 
-    document.getElementById("s1").href =
-      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
-    document.getElementById("v1").href =
-      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+    // Lecture 1
+    l1s.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
+    l1v.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+
+    // Lecture 2
+    l2s.href = atob("BASE64_SLIDES_2");
+    l2v.href = atob("BASE64_VIDEO_2");
+
+    // Lecture 3
+    l3s.href = atob("BASE64_SLIDES_3");
+    l3v.href = atob("BASE64_VIDEO_3");
+
   } else {
     alert("Incorrect password");
   }
