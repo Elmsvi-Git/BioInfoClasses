@@ -1,50 +1,74 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>دانلود فایل‌های کلاس</title>
+<title>Course Materials</title>
 <style>
-body{font-family:tahoma;direction:rtl;margin:40px}
-input,button{padding:8px;font-size:14px}
-#files{display:none;margin-top:20px}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f7fa;
+  margin:0;
+}
+header{
+  background:#1f2937;
+  color:white;
+  padding:30px;
+  text-align:center;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+.course{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+.course h3{
+  margin-top:0;
+}
+.course a{
+  text-decoration:none;
+  color:#2563eb;
+  font-weight:bold;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  color:#6b7280;
+}
 </style>
 </head>
 
 <body>
 
-<h2>ورود دانشجویان</h2>
-<p>برای مشاهده و دانلود فایل‌ها، رمز را وارد کنید</p>
+<header>
+  <h1>Course Materials</h1>
+  <p>Secure access to lecture slides and videos</p>
+</header>
 
-<input type="password" id="pw" placeholder="رمز ورود">
-<button onclick="unlock()">ورود</button>
+<div class="container">
 
-<div id="files">
-  <hr>
-  <h3>فایل‌های درس</h3>
-  <ul>
-    <li><a id="f1" target="_blank">📄 اسلاید جلسه ۱</a></li>
-    <li><a id="f2" target="_blank">🎥 ویدیو جلسه ۱</a></li>
-  </ul>
+  <div class="course">
+    <h3>Course 1: Introduction</h3>
+    <p>Lecture slides and recorded sessions.</p>
+    <a href="course1.html">Access course →</a>
+  </div>
+
+  <div class="course">
+    <h3>Course 2: Advanced Topics</h3>
+    <p>Advanced materials and practical examples.</p>
+    <a href="course2.html">Access course →</a>
+  </div>
+
 </div>
 
-<script>
-function unlock(){
-  const p = document.getElementById("pw").value;
-
-  if(p === "bio2025"){
-    document.getElementById("files").style.display = "block";
-
-    document.getElementById("f1").href =
-      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
-
-    document.getElementById("f2").href =
-      atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
-
-  } else {
-    alert("رمز اشتباه است");
-  }
-}
-</script>
+<footer>
+  © 2026 Course Website
+</footer>
 
 </body>
 </html>
