@@ -40,18 +40,16 @@ button:hover{
   display:none;
   margin-top:30px;
 }
-.lecture{
-  border-left:4px solid #2563eb;
-  padding:15px 20px;
-  margin-bottom:20px;
-  background:#f9fafb;
+.section{
+  margin-bottom:35px;
 }
-.lecture h4{
-  margin-top:0;
+.section h3{
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:8px;
 }
-.lecture a{
-  display:inline-block;
-  margin-right:20px;
+.list a{
+  display:block;
+  margin:10px 0;
   color:#2563eb;
   font-weight:bold;
   text-decoration:none;
@@ -63,34 +61,43 @@ button:hover{
 
 <header>
   <h2>Course 1: Introduction</h2>
-  <p>Lecture slides and recorded videos</p>
+  <p>Slides, session videos, and references</p>
 </header>
 
 <div class="container">
 
   <p>Please enter the course password:</p>
-
   <input type="password" id="pw" placeholder="Password">
   <button onclick="unlock()">Unlock</button>
 
   <div id="content">
 
-    <div class="lecture">
-      <h4>Lecture 1 – Overview</h4>
-      <a id="l1s" target="_blank">📄 Slides</a>
-      <a id="l1v" target="_blank">🎥 Video</a>
+    <!-- Slides -->
+    <div class="section">
+      <h3>Slides</h3>
+      <div class="list">
+        <a id="slides" target="_blank">📄 Full Course Slides (PDF)</a>
+      </div>
     </div>
 
-    <div class="lecture">
-      <h4>Lecture 2 – Core Concepts</h4>
-      <a id="l2s" target="_blank">📄 Slides</a>
-      <a id="l2v" target="_blank">🎥 Video</a>
+    <!-- Videos -->
+    <div class="section">
+      <h3>Session Videos</h3>
+      <div class="list">
+        <a id="v1" target="_blank">🎥 Session 1 – Introduction</a>
+        <a id="v2" target="_blank">🎥 Session 2 – Core Concepts</a>
+        <a id="v3" target="_blank">🎥 Session 3 – Applications</a>
+      </div>
     </div>
 
-    <div class="lecture">
-      <h4>Lecture 3 – Applications</h4>
-      <a id="l3s" target="_blank">📄 Slides</a>
-      <a id="l3v" target="_blank">🎥 Video</a>
+    <!-- References -->
+    <div class="section">
+      <h3>References</h3>
+      <div class="list">
+        <a id="r1" target="_blank">📘 Review Paper</a>
+        <a id="r2" target="_blank">📕 Textbook Chapter</a>
+        <a id="r3" target="_blank">🔗 External Resource</a>
+      </div>
     </div>
 
   </div>
@@ -102,17 +109,18 @@ function unlock(){
   if(document.getElementById("pw").value === "course1pass"){
     document.getElementById("content").style.display = "block";
 
-    // Lecture 1
-    l1s.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
-    l1v.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+    // Slides
+    slides.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
 
-    // Lecture 2
-    l2s.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
-    l2v.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+    // Videos
+    v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+    v2.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
+    v3.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlTa2hyNFQ3azBRQ3hIVFU2V0NackQ5MGZGb09mY08vdmlldz91c3A9ZHJpdmVfbGluaw");
 
-    // Lecture 3
-    l3s.href = atob("BASE64_SLIDES_3");
-    l3v.href = atob("BASE64_VIDEO_3");
+    // References
+    r1.href = atob("BASE64_REF_1");
+    r2.href = atob("BASE64_REF_2");
+    r3.href = atob("BASE64_REF_3");
 
   } else {
     alert("Incorrect password");
