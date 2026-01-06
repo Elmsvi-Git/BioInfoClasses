@@ -72,14 +72,6 @@ button:hover{
 
   <div id="content">
 
-    <!-- Slides -->
-    <div class="section">
-      <h3>Slides</h3>
-      <div class="list">
-        <a id="slides" target="_blank">📄 Full Course Slides (PDF)</a>
-      </div>
-    </div>
-
     <!-- Videos -->
     <div class="section">
       <h3>Session Videos</h3>
@@ -93,13 +85,30 @@ button:hover{
       </div>
     </div>
 
+    <!-- R Codes -->
+    <div class="section">
+      <h3>R Codes</h3>
+      <div class="list">
+        <a id="c1" target="_blank">📄 R: Derivative and Integral</a>
+        <a id="c2" target="_blank">📄 R: Ordinary Diffrential Equation</a>
+        <a id="c3" target="_blank">📄 R: Graph Introduction</a>
+        <a id="c4" target="_blank">📄 R: Biological Network Analysis</a>
+
+      </div>
+    </div>
+    
     <!-- References -->
     <div class="section">
-      <h3>References</h3>
+      <h3>📚 References</h3>
       <div class="list">
-        <a id="r1" target="_blank">📘 Review Paper</a>
-        <a id="r2" target="_blank">📕 Textbook Chapter</a>
-        <a id="r3" target="_blank">🔗 External Resource</a>
+        <a id="r1" target="_blank">📘 Biocalculus: Intorduction</a>
+        <a id="r2" target="_blank">📕 Population Modeling (chapter 1-3)</a>
+        <a id="r3" target="_blank">📙 Chemical Reaction Modeling (chapter 6)</a>
+        <a id="r4" target="_blank">📘 Disease Infection Modeling (chapter 6)</a>
+        <a id="r5" target="_blank">📕 Central Dogma Modeling</a>
+        <a id="r6" target="_blank">📙 Pharmacokinetics (chapter 17-20)</a>
+        <a id="r7" target="_blank">📘 Exploring Mathematical Modeling Using R</a>
+
       </div>
     </div>
 
@@ -112,8 +121,6 @@ function unlock(){
   if(document.getElementById("pw").value === "Math4041pass#"){
     document.getElementById("content").style.display = "block";
 
-    // Slides
-    slides.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
 
     // Videos
     v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
@@ -122,10 +129,21 @@ function unlock(){
     v4.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xcE93UjVtX3B5c0FZWHhKMlNzbzQ4LTVURl9pNXJiNGQvdmlldz91c3A9ZHJpdmVfbGluaw");
     v5.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xZ3BoejAxN1BPM0lucUg5R042ZFd3OVEtdlVDQ2c0VU0vdmlldz91c3A9ZHJpdmVfbGluaw");
 
+    // R Codes
+    c1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
+    c2.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
+    c3.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
+    c4.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdXIxdU42RWFqU2l3RjA4OHpWRVlZZnhSdWhnZ3FvTkEvdmlldz91c3A9ZHJpdmVfbGluaw");
+
     // References
     r1.href = atob("BASE64_REF_1");
     r2.href = atob("BASE64_REF_2");
     r3.href = atob("BASE64_REF_3");
+    r4.href = atob("BASE64_REF_1");
+    r5.href = atob("BASE64_REF_2");
+    r6.href = atob("BASE64_REF_3");
+    r7.href = atob("BASE64_REF_3");
+
 
   } else {
     alert("Incorrect password");
