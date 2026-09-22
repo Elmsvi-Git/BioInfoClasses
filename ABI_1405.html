@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Bio-Informatics</title>
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f7fa;
+  margin:0;
+}
+header{
+  background:#111827;
+  color:white;
+  padding:30px;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:white;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+input{
+  padding:10px;
+  width:250px;
+}
+button{
+  padding:10px 16px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+button:hover{
+  background:#1e40af;
+}
+#content{
+  display:none;
+  margin-top:30px;
+}
+.section{
+  margin-bottom:35px;
+}
+.section h3{
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:8px;
+}
+.list a{
+  display:block;
+  margin:10px 0;
+  color:#2563eb;
+  font-weight:bold;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Advanced Bio-Informatics</h2>
+  <p>Slides, session videos, and references</p>
+</header>
+
+<div class="container">
+
+  <p>Please enter the course password:</p>
+  <input type="password" id="pw" placeholder="Password">
+  <button onclick="unlock()">Unlock</button>
+
+  <div id="content">
+
+    <!-- Slides -->
+    <div class="section">
+      <h3>Slides</h3>
+      <div class="list">
+        <a id="slides" target="_blank">📄 Course Slides</a>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="section">
+      <h3>Session Videos</h3>
+      <div class="list">
+        <a id="v1" target="_blank">🎥 Session 1 – Python: Introduction and Installation</a>
+
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="section">
+      <h3>References</h3>
+      <div class="list">
+        <a id="r1" target="_blank">📘 Python Textbook</a>
+        <a id="r3" target="_blank">🔗 Other Resources: Think Python</a>
+        <a id="r4" target="_blank">🔗 Other Resources: Learn Python Programming</a>
+      </div>
+    </div>
+
+
+    <!-- Exercises -->
+    <div class="section">
+      <h3>Exercises</h3>
+      <div class="list">
+        <a id="e3" target="_blank">Problem set: Python</a>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("pw").value === "Abi405pass#"){
+    document.getElementById("content").style.display = "block";
+
+    // Slides
+
+    //Videos
+
+    v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xQ2RTa1FncHdfaHdMWElkZnN4M3A5WjluS1Q1NmJMLVcvdmlldz91c3A9ZHJpdmVfbGluaw");
+
+    // References
+    r1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xenJlc1BraVNiLXJRdnlLY1Fiek5iZU1vUHFuZGFYS2gvdmlldz91c3A9ZHJpdmVfbGluaw");
+
+    // Exercises
+    e1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xR1BZZU9GN0d6VmNZOEc2UWdEWHp6UTg3aTU5aFRxQlkvdmlldz91c3A9ZHJpdmVfbGluaw");
+
+  } else {
+    alert("Incorrect password");
+  }
+}
+</script>
+
+</body>
+</html>
