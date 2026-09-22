@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Systems Bio-Medicine</title>
+<title>Advanced Bio-Informatics 1405</title>
 <style>
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -60,7 +60,7 @@ button:hover{
 <body>
 
 <header>
-  <h2>Systems Bio-Medicine</h2>
+  <h2>Advanced Bio-Informatics 1405</h2>
   <p>Slides, session videos, and references</p>
 </header>
 
@@ -76,7 +76,7 @@ button:hover{
     <div class="section">
       <h3>Slides</h3>
       <div class="list">
-        <a id="slides" target="_blank">📄 Full Course Slides (PDF)</a>
+        <a id="slides" target="_blank">📄 Course Slides (Git+Linux)</a>
       </div>
     </div>
 
@@ -84,18 +84,8 @@ button:hover{
     <div class="section">
       <h3>Session Videos</h3>
       <div class="list">
-        <a id="v1" target="_blank">🎥 Session 1 – Cytoscape</a>
-        <a id="v2" target="_blank">🎥 Session 2 – Cytoscape</a>
-        <a id="v3" target="_blank">🎥 Session 3 – Cytoscape</a>
-        <a id="v4" target="_blank">🎥 Session 4 – Cytoscape</a>
-        <a id="v5" target="_blank">🎥 Session 5 – Autoamtion</a>
-        <a id="v6" target="_blank">🎥 Session 6 – Network Analysis</a>
-        <a id="v7" target="_blank">🎥 Session 7 – Network Analysis</a>
-        <a id="v8" target="_blank">🎥 Session 8 – Enrichment-ORA</a>
-        <a id="v9" target="_blank">🎥 Session 9 – Enrichment-GSEA</a>
-        <a id="v10" target="_blank">🎥 Session 10 – Enrichment-SPIA-ASEA</a>
-        <a id="v11" target="_blank">🎥 Session 11 – Reactome</a>
-        <a id="v12" target="_blank">🎥 Session 12 – Network Inference</a>
+        <a id="v1" target="_blank">🎥 Session 1 – Python Introduction & Instalation</a>
+
       </div>
     </div>
 
@@ -103,46 +93,41 @@ button:hover{
     <div class="section">
       <h3>References</h3>
       <div class="list">
-        <a id="r1" target="_blank">📘 Rcy3 Use Case</a>
-        <a id="r2" target="_blank">🔗 Paper: GSEA Enrichment</a>
-        <a id="r3" target="_blank">🔗 Paper: SPIA Enrichment</a>
-        <a id="r4" target="_blank">🔗 Paper: ASEA Enrichment</a>
-        <a id="r5" target="_blank">🔗 Paper: Netwrok analysis</a>
+        <a id="r1" target="_blank">📘 Python Textbook</a>
+        <a id="r2" target="_blank">🔗 Other Resources: Think Python</a>
       </div>
     </div>
 
+
+    <!-- Exercises -->
+    <div class="section">
+      <h3>Exercises</h3>
+      <div class="list">
+        <a id="e1" target="_blank">Problem set: Python</a>
+      </div>
+    </div>
+    
   </div>
 
 </div>
 
 <script>
 function unlock(){
-  if(document.getElementById("pw").value === "Sysbio2pass#"){
+  if(document.getElementById("pw").value === "Abi405pass#"){
     document.getElementById("content").style.display = "block";
 
     // Slides
-    slides.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xZjViX1dkN3BDaFQ1emlrQkx4anA3aGV3TXZBWUdfQkYvdmlldz91c3A9ZHJpdmVfbGluaw");
+    slides.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSXcxYmRlSWZOOF9xeUUtOENRc3A4S0Foek9qdG1YOWcvdmlldz91c3A9ZHJpdmVfbGluaw");
 
-    // Videos
-    v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xUDhWSFgxUWlzVEFUZTNkOTJUWlcydjUtbGhwNXkwZ3Yvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v2.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWWlFSU5mY2F4TXhydVJZdGlCNU1wbk5nVEtTeVF6VjEvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v3.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xVVA1d2ZtdDVLRUhqTEdTWU9pajZpR0NPejluYzJSNzMvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v4.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xeV8tVmVuclBTWDkwbkZSOExPdXB2a0piamJ0eWtRSkkvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v5.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdHIyUW1WVENvZ19BV1RyMHRNN3ZEbVhhRFBQY1BRLUgvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v6.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xRnB5SURkVDMzT0FqeFgxYS1uWWUycHlnaF9JdXZKSksvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v7.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xVWl1V25ZUTMybjFqdm5CSXVwNVo3ZjFMV2xFVHVpck0vdmlldz91c3A9ZHJpdmVfbGluaw");
-    v8.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xRzNrVzBoLVVsc2J5ME9MZUZfbnlKaEpuaWVMbTNQR0Ivdmlldz91c3A9ZHJpdmVfbGluaw");
-    v9.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xWkFscWZod2ZIOFVvemRhNkRBRERmLUl5NkdKYUsteFgvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v10.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdnpfXzI4V3VPZi0yRG9iWm5Mdk4xMmc3RWVnellZM3Qvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v11.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xOHU5LXpFU250SUxxMjhxWjREZUJvZ3FRWjlybjZBOXkvdmlldz91c3A9ZHJpdmVfbGluaw");
-    v12.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xUHF1MDNFS2NYSkRzUzhCMm5nSFNNLUdEdmIySExSOGwvdmlldz91c3A9ZHJpdmVfbGluaw");
+    //Videos
+
+    v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xQ2RTa1FncHdfaHdMWElkZnN4M3A5WjluS1Q1NmJMLVcvdmlldz91c3A9ZHJpdmVfbGluaw");
 
     // References
-    r1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xSW9GVjJZbTYtakh1LXhpbGJIMkpSdkh6SVhjRWdjb3Yvdmlldz91c3A9ZHJpdmVfbGluaw");
-    r2.href = atob("aHR0cHM6Ly93d3cucG5hcy5vcmcvZG9pL2Z1bGwvMTAuMTA3My9wbmFzLjA1MDY1ODAxMDI");
-    r3.href = atob("aHR0cHM6Ly9hY2FkZW1pYy5vdXAuY29tL2Jpb2luZm9ybWF0aWNzL2FydGljbGUvMjUvMS83NS8zMDI4NDY");
-    r4.href = atob("aHR0cHM6Ly93d3cuZnJvbnRpZXJzaW4ub3JnL2pvdXJuYWxzL2dlbmV0aWNzL2FydGljbGVzLzEwLjMzODkvZmdlbmUuMjAxOS4wMDg1OC9mdWxs");
-    r5.href = atob("aHR0cHM6Ly9hY2FkZW1pYy5vdXAuY29tL2Jpb2luZm9ybWF0aWNzYWR2YW5jZXMvYXJ0aWNsZS80LzEvdmJhZTA5OS83NzMyODUx");
+    r1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xenJlc1BraVNiLXJRdnlLY1Fiek5iZU1vUHFuZGFYS2gvdmlldz91c3A9ZHJpdmVfbGluaw");
+
+    // Exercises
+    e1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xR1BZZU9GN0d6VmNZOEc2UWdEWHp6UTg3aTU5aFRxQlkvdmlldz91c3A9ZHJpdmVfbGluaw");
 
   } else {
     alert("Incorrect password");
