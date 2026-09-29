@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Advanced Bio-Informatics (1405)</title>
+<title>Natural language processing (1405)</title>
 <style>
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -60,8 +60,8 @@ button:hover{
 <body>
 
 <header>
-  <h2>Advanced Bio-Informatics</h2>
-  <p>Slides, session videos, and references</p>
+  <h2>Natural language processing</h2>
+  <p>Slides, and references</p>
 </header>
 
 <div class="container">
@@ -80,33 +80,20 @@ button:hover{
       </div>
     </div>
 
-    <!-- Videos -->
-    <div class="section">
-      <h3>Session Videos</h3>
-      <div class="list">
-        <a id="v1" target="_blank">🎥 Session 1 – Python: Introduction and Installation</a>
-
-      </div>
-    </div>
 
     <!-- References -->
     <div class="section">
       <h3>References</h3>
       <div class="list">
-        <a id="r1" target="_blank">📘 Python Textbook</a>
-        <a id="r3" target="_blank">🔗 Other Resources: Think Python</a>
-        <a id="r4" target="_blank">🔗 Other Resources: Learn Python Programming</a>
+        <a id="r1" target="_blank">📘 Speech and Language Processing, An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language 
+        </a>
+        <a id="r3" target="_blank">🔗 Hands-On Large Language Models
+        </a>
+        <a id="r4" target="_blank">🔗 Natural Language Processing with Transformers
+        </a>
       </div>
     </div>
 
-
-    <!-- Exercises -->
-    <div class="section">
-      <h3>Exercises</h3>
-      <div class="list">
-        <a id="e3" target="_blank">Problem set: Python</a>
-      </div>
-    </div>
     
   </div>
 
@@ -118,15 +105,8 @@ function unlock(){
     document.getElementById("content").style.display = "block";
 
     // Slides
+    slides.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xdFl1QURhVl9mREktSFBqQV9ERy1WTks2RUhHNGdnTU0vdmlldz91c3A9ZHJpdmVfbGluaw==");
 
-    //Videos
-    v1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xblluSmowdjh0SlFhdEJwbW80V2V4a2swOThkSkZ5bVYvdmlldz91c3A9ZHJpdmVfbGluaw==");    
-   
-    // References
-    r1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xenJlc1BraVNiLXJRdnlLY1Fiek5iZU1vUHFuZGFYS2gvdmlldz91c3A9ZHJpdmVfbGluaw");
-
-    // Exercises
-    e1.href = atob("aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xR1BZZU9GN0d6VmNZOEc2UWdEWHp6UTg3aTU5aFRxQlkvdmlldz91c3A9ZHJpdmVfbGluaw");
 
   } else {
     alert("Incorrect password");
